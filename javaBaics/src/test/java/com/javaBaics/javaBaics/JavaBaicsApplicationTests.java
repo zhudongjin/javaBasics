@@ -1,5 +1,6 @@
 package com.javaBaics.javaBaics;
 
+import com.javaBaics.javaBaics.lambdas.lists;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,4 +14,18 @@ public class JavaBaicsApplicationTests {
 	public void contextLoads() {
 	}
 
+	@Test
+	public void lambadlist(){
+		lists.listX();
+	}
+
+	@Test
+	public void lambdaThread(){
+		lists.testThread();
+	}
+
+	@Test
+	public void functionInterfacetest(){
+		lists.testFunctionInterface();
+	}
 }
