@@ -1,8 +1,10 @@
 package com.javaBaics.javaBaics.lambdas;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class lists {
@@ -27,6 +29,20 @@ public class lists {
 
     public static void testFunctionInterface(){
         testFunctionInterface testFunctionInterface = message -> System.out.println("11");
+        testFunctionInterface testFunctionInterface1 = message -> {};
+    }
+
+    public static void filtertest(){
+        List languages = Arrays.asList("Java", "Scala", "C++", "Haskell", "Lisp");
+        //filter(languages,(str)->str.);
+        filter(languages, (String)->"".startsWith("J"));
+    }
+
+    public static void filter(List names, Predicate condition){
+       names.stream().filter((name)->(condition.test(name)))
+               .forEach((name)->{
+                   System.out.println(name);
+               });
     }
 
 

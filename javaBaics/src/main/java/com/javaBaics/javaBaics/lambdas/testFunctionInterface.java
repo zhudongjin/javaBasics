@@ -4,4 +4,8 @@ package com.javaBaics.javaBaics.lambdas;
 interface testFunctionInterface {
 
     void sayMessage(String message);
+
+    default void defMessage(){
+        System.out.println("default");
+    }
 }
