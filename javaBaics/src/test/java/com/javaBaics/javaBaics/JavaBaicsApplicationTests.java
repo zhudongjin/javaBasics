@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+//@SpringBootTest
 public class JavaBaicsApplicationTests {
 
 	@Test
@@ -15,7 +15,7 @@ public class JavaBaicsApplicationTests {
 	}
 
 	@Test
-	public void lambadlist(){
+	public  void testLambad(){
 		lists.listX();
 	}
 
@@ -25,7 +25,7 @@ public class JavaBaicsApplicationTests {
 	}
 
 	@Test
-	public void functionInterfacetest(){
-		lists.testFunctionInterface();
+	public void testList(){
+		lists.testList();
 	}
 }

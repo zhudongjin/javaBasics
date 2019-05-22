@@ -1,23 +1,19 @@
 package com.javaBaics.javaBaics.lambdas;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class lists {
 
+
+    public static void testLambad(String str,TestLambad<String> testLambad){
+        testLambad.sayMessage(str);
+        testLambad.defMessage();
+    }
+
     public static void listX(){
-        List<String> list = new ArrayList<>();
-        list.add("111");
-        list.add("222");
-        list.add("333");
-        list.stream().forEach(str ->{
-            System.out.println(str);
-        });
-        Collectors.toList();
+        lists.testLambad("2222",s -> System.out.println(s));
     }
 
 
@@ -25,11 +21,6 @@ public class lists {
         new Thread(() ->{
             System.out.println("噢噢噢噢噢噢噢噢噢");
         }).start();
-    }
-
-    public static void testFunctionInterface(){
-        testFunctionInterface testFunctionInterface = message -> System.out.println("11");
-        testFunctionInterface testFunctionInterface1 = message -> {};
     }
 
     public static void filtertest(){
@@ -43,6 +34,27 @@ public class lists {
                .forEach((name)->{
                    System.out.println(name);
                });
+    }
+
+    /***
+     * 集合实现方法
+     */
+    public static void testList(){
+        //直接存字符串遍历方法
+        List<String> languages = Arrays.asList("Java", "Scala", "C++", "Haskell", "Lisp");
+        //只打印包含J的数据
+        languages.stream().filter(s -> s.contains("J")).forEach(str ->{
+            System.out.println(str);
+        });
+        //Map处理方法
+        Map<String,Object> mp = new HashMap<String,Object>();
+        mp.put("1111",111);
+        mp.put("2222",2222);
+        mp.forEach((k,v) ->{
+            System.out.println(k+":====:"+v);
+        });
+
+
     }
 
 

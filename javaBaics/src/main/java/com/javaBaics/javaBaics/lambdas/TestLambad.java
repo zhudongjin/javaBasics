@@ -1,11 +1,11 @@
 package com.javaBaics.javaBaics.lambdas;
 
 @FunctionalInterface
-interface testFunctionInterface {
+interface TestLambad<T> {
 
-    void sayMessage(String message);
+   public void sayMessage(T message);
 
-    default void defMessage(){
+   public default void defMessage(){
         System.out.println("default");
     }
 }
