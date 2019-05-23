@@ -57,5 +57,20 @@ public class lists {
 
     }
 
+    /***
+     * 匿名内部类
+     */
+    public static void anonymousTest(){
+        ArrayList<String> list = new ArrayList<>(Arrays.asList("I", "love", "you", "too"));
+        list.removeIf(new Predicate<String>(){
+
+            @Override
+            public boolean test(String s) {
+                return false;
+            }
+        });
+
+    }
+
 
 }
