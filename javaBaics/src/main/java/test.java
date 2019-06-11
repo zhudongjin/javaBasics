@@ -4,9 +4,8 @@ import java.util.ServiceLoader;
 
 public class test {
     public static void main(String[] args) {
-        ServiceLoader<testIntface> t = ServiceLoader.load(testIntface.class);
-        for (testIntface b:t){
-            b.execut();
-        }
+        int num = 10;
+        System.out.println(Integer.toBinaryString(num >>> 1));
     }
+
 }
